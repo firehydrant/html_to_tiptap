@@ -7,15 +7,19 @@ module HtmlToProsemirror
       end
 
       def data
+        attrs = {
+          src: @node.attribute("src").value
+        }
+
+        alt = @node.attribute("alt")
+        attrs[:alt] = alt.value if alt
+
+        title = @node.attribute("title")
+        attrs[:title] = title.value if title
+
         {
-          type: "text",
-          text: @node.attribute('src').value,
-          marks: [{
-            type: 'link',
-            attrs: {
-              href: @node.attribute('src').value
-            }
-          }]
+          type: "image",
+          attrs: attrs
         }
       end
     end

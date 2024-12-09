@@ -4,14 +4,11 @@ RSpec.describe HtmlToProsemirror::Nodes::Image do
     json = {
       type: 'doc',
       content: [{
-        type: 'text',
-        text: 'https://example.com/eggs.png',
-        marks: [{
-          type: 'link',
-          attrs: {
-            href: 'https://example.com/eggs.png'
-          }
-        }]
+        type: 'image',
+        attrs: {
+          src: 'https://example.com/eggs.png',
+          alt: 'The Finished Dish'
+        }
       }]
     }
 
