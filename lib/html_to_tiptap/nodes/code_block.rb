@@ -7,7 +7,7 @@ module HtmlToTiptap
       end
 
       def data
-        block = { type: "code_block" }
+        block = { type: "codeBlock" }
         lang = get_language
         block.merge({attrs: { language: lang } }) if lang
         block
