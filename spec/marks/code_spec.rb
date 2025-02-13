@@ -1,4 +1,4 @@
-RSpec.describe HtmlToProsemirror::Marks::Code do
+RSpec.describe HtmlToTiptap::Marks::Code do
   it "renders inline code correctly" do
     html = '<p><code>Example Text</code></p>';
     json = {
@@ -15,7 +15,7 @@ RSpec.describe HtmlToProsemirror::Marks::Code do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 end

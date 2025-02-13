@@ -1,17 +1,17 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "html_to_prosemirror/version"
+require "html_to_tiptap/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "html_to_prosemirror"
-  spec.version       = HtmlToProsemirror::VERSION
-  spec.authors       = ["Brian Kimball"]
-  spec.email         = ["bvkimball@gmail.com"]
+  spec.name          = "html_to_tiptap"
+  spec.version       = HtmlToTiptap::VERSION
+  spec.authors       = ["Firehydrant"]
+  spec.email         = ["firehydrant@firehydrant.com"]
 
-  spec.summary       = %q{Takes HTML and outputs ProseMirror compatible JSON.}
-  spec.description   = %q{Takes HTML and outputs ProseMirror compatible JSON.}
-  spec.homepage      = "https://github.com/inputhq/html_to_prosemirror"
+  spec.summary       = %q{Takes HTML and outputs Tiptap JSON.}
+  spec.description   = %q{Takes HTML and outputs Tiptap JSON.}
+  spec.homepage      = ""
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

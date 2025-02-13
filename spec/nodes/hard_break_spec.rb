@@ -1,4 +1,4 @@
-RSpec.describe HtmlToProsemirror::Nodes::HardBreak do
+RSpec.describe HtmlToTiptap::Nodes::HardBreak do
   it "renders hard breaks correctly" do
     html = '<p>Hard <br />Break</p>';
     json = {
@@ -17,7 +17,7 @@ RSpec.describe HtmlToProsemirror::Nodes::HardBreak do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 end

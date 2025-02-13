@@ -1,4 +1,4 @@
-RSpec.describe HtmlToProsemirror::Marks::Bold do
+RSpec.describe HtmlToTiptap::Marks::Bold do
   it "renders strong correctly" do
     html = '<p><strong>Example Text</strong></p>';
     json = {
@@ -15,7 +15,7 @@ RSpec.describe HtmlToProsemirror::Marks::Bold do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 end

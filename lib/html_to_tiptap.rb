@@ -1,47 +1,47 @@
-require "html_to_prosemirror/version"
-require "html_to_prosemirror/marks/mark"
-require "html_to_prosemirror/marks/bold"
-require "html_to_prosemirror/marks/code"
-require "html_to_prosemirror/marks/italic"
-require "html_to_prosemirror/marks/link"
-require "html_to_prosemirror/nodes/node"
-require "html_to_prosemirror/nodes/bullet_list"
-require "html_to_prosemirror/nodes/code_block_wrapper"
-require "html_to_prosemirror/nodes/code_block"
-require "html_to_prosemirror/nodes/hard_break"
-require "html_to_prosemirror/nodes/heading"
-require "html_to_prosemirror/nodes/image"
-require "html_to_prosemirror/nodes/list_item"
-require "html_to_prosemirror/nodes/ordered_list"
-require "html_to_prosemirror/nodes/paragraph"
-require "html_to_prosemirror/nodes/text"
-require "html_to_prosemirror/nodes/user"
+require "html_to_tiptap/version"
+require "html_to_tiptap/marks/mark"
+require "html_to_tiptap/marks/bold"
+require "html_to_tiptap/marks/code"
+require "html_to_tiptap/marks/italic"
+require "html_to_tiptap/marks/link"
+require "html_to_tiptap/nodes/node"
+require "html_to_tiptap/nodes/bullet_list"
+require "html_to_tiptap/nodes/code_block_wrapper"
+require "html_to_tiptap/nodes/code_block"
+require "html_to_tiptap/nodes/hard_break"
+require "html_to_tiptap/nodes/heading"
+require "html_to_tiptap/nodes/image"
+require "html_to_tiptap/nodes/list_item"
+require "html_to_tiptap/nodes/ordered_list"
+require "html_to_tiptap/nodes/paragraph"
+require "html_to_tiptap/nodes/text"
+require "html_to_tiptap/nodes/user"
 require 'nokogiri'
 
-module HtmlToProsemirror
+module HtmlToTiptap
   class Error < StandardError; end
   # Your code goes here...
   class Renderer
     def initialize()
       @storedMarks = []
       @marks = [
-        HtmlToProsemirror::Marks::Bold,
-        HtmlToProsemirror::Marks::Code,
-        HtmlToProsemirror::Marks::Italic,
-        HtmlToProsemirror::Marks::Link
+        HtmlToTiptap::Marks::Bold,
+        HtmlToTiptap::Marks::Code,
+        HtmlToTiptap::Marks::Italic,
+        HtmlToTiptap::Marks::Link
       ]
       @nodes = [
-        HtmlToProsemirror::Nodes::BulletList,
-        HtmlToProsemirror::Nodes::CodeBlockWrapper,
-        HtmlToProsemirror::Nodes::CodeBlock,
-        HtmlToProsemirror::Nodes::HardBreak,
-        HtmlToProsemirror::Nodes::Heading,
-        HtmlToProsemirror::Nodes::Image,
-        HtmlToProsemirror::Nodes::ListItem,
-        HtmlToProsemirror::Nodes::OrderedList,
-        HtmlToProsemirror::Nodes::Paragraph,
-        HtmlToProsemirror::Nodes::Text,
-        HtmlToProsemirror::Nodes::User
+        HtmlToTiptap::Nodes::BulletList,
+        HtmlToTiptap::Nodes::CodeBlockWrapper,
+        HtmlToTiptap::Nodes::CodeBlock,
+        HtmlToTiptap::Nodes::HardBreak,
+        HtmlToTiptap::Nodes::Heading,
+        HtmlToTiptap::Nodes::Image,
+        HtmlToTiptap::Nodes::ListItem,
+        HtmlToTiptap::Nodes::OrderedList,
+        HtmlToTiptap::Nodes::Paragraph,
+        HtmlToTiptap::Nodes::Text,
+        HtmlToTiptap::Nodes::User
       ]
     end
 

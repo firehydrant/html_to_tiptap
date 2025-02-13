@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "html_to_prosemirror"
+require "html_to_tiptap"
 require 'json'
 
 RSpec.configure do |config|

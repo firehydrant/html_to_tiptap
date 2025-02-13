@@ -1,4 +1,4 @@
-RSpec.describe HtmlToProsemirror::Nodes::Image do
+RSpec.describe HtmlToTiptap::Nodes::Image do
   it "renders images as links" do
     html = '<img src="https://example.com/eggs.png" alt="The Finished Dish" />';
     json = {
@@ -12,7 +12,7 @@ RSpec.describe HtmlToProsemirror::Nodes::Image do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 end

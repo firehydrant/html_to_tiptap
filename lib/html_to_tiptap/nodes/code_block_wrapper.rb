@@ -1,4 +1,4 @@
-module HtmlToProsemirror
+module HtmlToTiptap
   module Nodes
     class CodeBlockWrapper < Node
       def matching

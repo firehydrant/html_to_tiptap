@@ -1,4 +1,4 @@
-RSpec.describe HtmlToProsemirror::Nodes::Heading do
+RSpec.describe HtmlToTiptap::Nodes::Heading do
   it "renders h1 correctly" do
     html = '<h1>Example Text</h1>';
     json = {
@@ -15,7 +15,7 @@ RSpec.describe HtmlToProsemirror::Nodes::Heading do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 
@@ -35,7 +35,7 @@ RSpec.describe HtmlToProsemirror::Nodes::Heading do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 
@@ -55,7 +55,7 @@ RSpec.describe HtmlToProsemirror::Nodes::Heading do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 end

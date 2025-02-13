@@ -1,4 +1,4 @@
-module HtmlToProsemirror
+module HtmlToTiptap
   module Marks
     class Mark
       attr_writer :type

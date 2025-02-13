@@ -1,4 +1,4 @@
-RSpec.describe HtmlToProsemirror::Nodes::CodeBlock do
+RSpec.describe HtmlToTiptap::Nodes::CodeBlock do
   it "renders code blocks correctly" do
     html = '<pre><code>Example Text</code></pre>';
     json = {
@@ -12,7 +12,7 @@ RSpec.describe HtmlToProsemirror::Nodes::CodeBlock do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 end

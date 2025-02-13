@@ -1,4 +1,4 @@
-module HtmlToProsemirror
+module HtmlToTiptap
   module Nodes
     class ListItem < Node
       def initialize(dom_node)

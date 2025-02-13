@@ -1,4 +1,4 @@
-RSpec.describe HtmlToProsemirror::Marks::Link do
+RSpec.describe HtmlToTiptap::Marks::Link do
   it "renders links correctly" do
     html = '<a href="https://input.com">Example Link</a>';
     json = {
@@ -15,7 +15,7 @@ RSpec.describe HtmlToProsemirror::Marks::Link do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 end

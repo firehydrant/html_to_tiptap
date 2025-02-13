@@ -1,4 +1,4 @@
-RSpec.describe HtmlToProsemirror::Nodes::BulletList do
+RSpec.describe HtmlToTiptap::Nodes::BulletList do
   it "renders bullet list correctly" do
     html = '<ul><li><p>First Example</p></li><li><p>Second Example</p></li></ul>';
     json = {
@@ -27,7 +27,7 @@ RSpec.describe HtmlToProsemirror::Nodes::BulletList do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 end

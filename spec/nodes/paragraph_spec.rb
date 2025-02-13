@@ -1,4 +1,4 @@
-RSpec.describe HtmlToProsemirror::Nodes::Paragraph do
+RSpec.describe HtmlToTiptap::Nodes::Paragraph do
   it "renders simple paragraph correctly" do
     html = '<p>Example Text</p>';
     json = {
@@ -12,7 +12,7 @@ RSpec.describe HtmlToProsemirror::Nodes::Paragraph do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 
@@ -35,7 +35,7 @@ RSpec.describe HtmlToProsemirror::Nodes::Paragraph do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 
@@ -52,7 +52,7 @@ RSpec.describe HtmlToProsemirror::Nodes::Paragraph do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 
@@ -80,7 +80,7 @@ RSpec.describe HtmlToProsemirror::Nodes::Paragraph do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 end

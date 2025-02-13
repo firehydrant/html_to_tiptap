@@ -1,6 +1,6 @@
-RSpec.describe HtmlToProsemirror do
+RSpec.describe HtmlToTiptap do
   it "has a version number" do
-    expect(HtmlToProsemirror::VERSION).not_to be nil
+    expect(HtmlToTiptap::VERSION).not_to be nil
   end
 
   it "renders complex html correctly" do
@@ -69,7 +69,7 @@ RSpec.describe HtmlToProsemirror do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 end

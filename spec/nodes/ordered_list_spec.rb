@@ -1,4 +1,4 @@
-RSpec.describe HtmlToProsemirror::Nodes::OrderedList do
+RSpec.describe HtmlToTiptap::Nodes::OrderedList do
   it "renders ordered list correctly" do
     html = '<ol><li><p>First Example</p></li><li><p>Second Example</p></li></ol>';
     json = {
@@ -30,7 +30,7 @@ RSpec.describe HtmlToProsemirror::Nodes::OrderedList do
       }]
     }
 
-    renderer = HtmlToProsemirror::Renderer.new()
+    renderer = HtmlToTiptap::Renderer.new()
     expect(json).to eq renderer.render(html)
   end
 end

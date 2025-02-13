@@ -10,4 +10,4 @@
 # rspec failure tracking
 .rspec_status
 .DS_Store
-html_to_prosemirror-*.gem
+html_to_tiptap-*.gem

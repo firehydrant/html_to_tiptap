@@ -1,14 +1,14 @@
-module HtmlToProsemirror
+module HtmlToTiptap
   module Marks
-    class Italic < Mark
+    class Bold < Mark
 
       def matching
-        @node.name === 'em'
+        @node.name === 'strong'
       end
 
       def data
         {
-          type: "italic"
+          type: "bold"
         }
       end
     end
