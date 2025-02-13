@@ -4,7 +4,7 @@ RSpec.describe HtmlToTiptap::Nodes::CodeBlock do
     json = {
       type: 'doc',
       content: [{
-        type: 'code_block',
+        type: 'codeBlock',
         content: [{
           type: 'text',
           text: 'Example Text',

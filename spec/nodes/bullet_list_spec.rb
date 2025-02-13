@@ -4,9 +4,9 @@ RSpec.describe HtmlToTiptap::Nodes::BulletList do
     json = {
       type: 'doc',
       content: [{
-        type: 'bullet_list',
+        type: 'bulletList',
         content: [{
-          type: 'list_item',
+          type: 'listItem',
           content: [{
             type: 'paragraph',
             content: [{
@@ -15,7 +15,7 @@ RSpec.describe HtmlToTiptap::Nodes::BulletList do
             }]
           }]
         },{
-          type: 'list_item',
+          type: 'listItem',
           content: [{
             type: 'paragraph',
             content: [{

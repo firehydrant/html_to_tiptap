@@ -4,12 +4,12 @@ RSpec.describe HtmlToTiptap::Nodes::OrderedList do
     json = {
       type: 'doc',
       content: [{
-        type: 'ordered_list',
+        type: 'orderedList',
         attrs: {
           order: 1,
         },
         content: [{
-          type: 'list_item',
+          type: 'listItem',
           content: [{
             type: 'paragraph',
             content: [{
@@ -18,7 +18,7 @@ RSpec.describe HtmlToTiptap::Nodes::OrderedList do
             }]
           }]
         },{
-          type: 'list_item',
+          type: 'listItem',
           content: [{
             type: 'paragraph',
             content: [{
