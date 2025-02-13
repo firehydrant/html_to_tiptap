@@ -9,7 +9,8 @@ RSpec.describe HtmlToTiptap::Nodes::HardBreak do
           type: 'text',
           text: 'Hard ',
         },{
-          type: 'hardBreak'
+          type: 'paragraph',
+          content: []
         },{
           type: 'text',
           text: 'Break',

@@ -8,7 +8,8 @@ module HtmlToTiptap
 
       def data
         {
-          type: "hardBreak"
+          type: "paragraph",
+          content: []
         }
       end
     end
